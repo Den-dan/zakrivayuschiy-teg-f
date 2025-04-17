@@ -1,0 +1,15 @@
+<svg style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 216 216" fill="currentColor">
+  <symbol id="circle">
+    <circle cx="108" cy="108" r="108" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<article>
+  <button class="button">
+    <svg viewBox="0 0 216 216" width="21" height="21">
+      <use href="#circle"></use>
+    </svg>
+    
+    <span class="button__text">Button</span>
+  </button>
+</article>
