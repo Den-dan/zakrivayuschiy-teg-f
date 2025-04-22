@@ -13,7 +13,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--font-main);
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' var(--font-main, 400);
 }
 
 .page::before {
@@ -72,7 +73,11 @@
   margin: 4px 10px 5px 12px;
   font-size: 18px;
   font-family: var(--font-main);
-  font-variation-settings: "wght" var(--weight-card-title);
+  font-variation-settings: 'wght' var(--font-accent, 700);
+}
+
+.card_subtitle {
+  line-height: 21px;
 }
 
 .overlay {
@@ -143,11 +148,6 @@
   display: grid;
   flex-direction: column;
   gap: 27px;
-}
-
-.card_subtitle {
-  font-weight: 400;
-  line-height: 21px;
 }
 
 .animation_section {
@@ -252,32 +252,26 @@
 
 .button__text {
   font-size: 14px;
+  position: relative;
 }
 
 .button__animation {
   border: none;
-  background-color: transparent;
+  background-color: white;
   position: relative;
   overflow: hidden;
   font-family: var(--font-accent);
   transition: 0.3s ease;
 }
 
-.button__animation svg,
-.button__animation span {
-  position: relative;
-}
-
 .button__animation:hover .button__text,
-.button__animation:hover svg,
-.button__animation:hover span{
+.button__animation:hover svg {
   mix-blend-mode: difference;
   color: white;
   cursor: pointer;
 }
 
 .button__animation::before {
-  transition: color 0.3s ease;
   content: "";
   position: absolute;
   top: 0;
@@ -301,9 +295,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: none;
   font-family: var(--font-accent);
-  background-color: transparent;
   outline: 2px solid black;
   height: 80px;
   padding: 15px 20px;
