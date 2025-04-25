@@ -1,6 +1,8 @@
 :root {
     --font-main: 'Inter', sans-serif;
     --font-accent: 'PressStart2P', sans-serif;
+    --font-title: 700;
+    --font-subtitle: 400;
     --main-bg: 
     repeating-linear-gradient(
       to right,

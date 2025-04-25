@@ -13,8 +13,8 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font), sans-serif;
-  font-variation-settings: 'wght' var(--font-main, 400);
+  font-family: var(--font-main), sans-serif;
+  font-variation-settings: 'wght' var(--font-subtitle, 400);
   background-image: var(--main-bg);
   background-size: cover;
   background-position: center;
@@ -62,8 +62,7 @@
 .card_title {
   margin: 4px 10px 5px 12px;
   font-size: 18px;
-  font-family: var(--font-main);
-  font-variation-settings: 'wght' var(--font-accent, 700);
+  font-variation-settings: 'wght' var(--font-title, 700);
 }
 
 .card_subtitle {
@@ -99,7 +98,7 @@
 @supports (-webkit-text-stroke: 1px white) or (text-stroke: 1px white) {
   .image_title {
     -webkit-text-stroke: 1px white;
-    text-stroke: 1px white;
+    text-shadow: 1px white;
   }
 }
 
@@ -134,7 +133,6 @@
 .card_info {
   padding: 24px 28px 28px 27px;
   font-size: 18px;
-  font-variation-settings: "wght" var(--weight-card-text);
   display: grid;
   flex-direction: column;
   gap: 27px;
@@ -154,11 +152,11 @@
   display: flex;
   align-items: center;
   margin-right: 5px;
+  transition: 0.3s ease;
 }
 
 .card__icon-button:focus {
   box-shadow: 0 0 0 2px black;
-  transition: box-shadow 0.3s ease;
 }
 
 
@@ -238,12 +236,17 @@
 .card__like-button {
   min-width: 130px;
   outline: 2px solid black;
-  padding: 7px 36px 9px 34px;
+  padding: 7px 0 9px 0;
 }
 
 .button__text {
   font-size: 14px;
-  position: relative;
+}
+
+.icon,
+.button__text {
+  color: white;
+  mix-blend-mode: difference;
 }
 
 .button__animation {
@@ -256,7 +259,7 @@
 }
 
 .button__animation:hover .button__text,
-.button__animation:hover svg {
+.button__animation:hover .icon {
   mix-blend-mode: difference;
   color: white;
   cursor: pointer;
