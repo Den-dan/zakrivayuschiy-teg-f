@@ -81,7 +81,11 @@
   font-family: var(--font-accent);
   opacity: 50%;
   font-size: 14px;
-  text-shadow: 0 0 1px white, 0 0 2px white;
+  text-shadow:
+  -1px -1px 0 white,
+  1px -1px 0 white,
+  -1px  1px 0 white,
+  1px  1px 0 white;
 }
 
 @supports (-webkit-text-stroke: 1px white) {
@@ -327,7 +331,7 @@ dialog::backdrop {
 
 @media (width >= 1000px) {
   .page {
-    padding: 0px 370px;
+    padding: 0 25.7%;
   }
 
   .header {
